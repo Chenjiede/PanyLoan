@@ -15,6 +15,9 @@
 		07A86E08226DE079009620D5 /* PLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E07226DE079009620D5 /* PLTabBarController.m */; };
 		07A86E0B226DE096009620D5 /* PLNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E0A226DE096009620D5 /* PLNavgationController.m */; };
 		07A86E0E226DE11A009620D5 /* PLMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E0D226DE11A009620D5 /* PLMacro.m */; };
+		07A86E14226DE965009620D5 /* PLBillController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E13226DE965009620D5 /* PLBillController.m */; };
+		07A86E17226DE984009620D5 /* PLMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E16226DE984009620D5 /* PLMineController.m */; };
+		07A86E1A226DE990009620D5 /* PLHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86E19226DE990009620D5 /* PLHomeController.m */; };
 		5CB380EAA9FC460F0DF1909B /* libPods-PanyLoan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5373ACFC067C52A88967A0 /* libPods-PanyLoan.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,12 @@
 		07A86E0A226DE096009620D5 /* PLNavgationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLNavgationController.m; sourceTree = "<group>"; };
 		07A86E0C226DE11A009620D5 /* PLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMacro.h; sourceTree = "<group>"; };
 		07A86E0D226DE11A009620D5 /* PLMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMacro.m; sourceTree = "<group>"; };
+		07A86E12226DE965009620D5 /* PLBillController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLBillController.h; sourceTree = "<group>"; };
+		07A86E13226DE965009620D5 /* PLBillController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLBillController.m; sourceTree = "<group>"; };
+		07A86E15226DE984009620D5 /* PLMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMineController.h; sourceTree = "<group>"; };
+		07A86E16226DE984009620D5 /* PLMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMineController.m; sourceTree = "<group>"; };
+		07A86E18226DE990009620D5 /* PLHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLHomeController.h; sourceTree = "<group>"; };
+		07A86E19226DE990009620D5 /* PLHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLHomeController.m; sourceTree = "<group>"; };
 		3C602D893520298A49ED9EFB /* Pods-PanyLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanyLoan.debug.xcconfig"; path = "Target Support Files/Pods-PanyLoan/Pods-PanyLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		47BF55339BB57517DC162888 /* Pods-PanyLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanyLoan.release.xcconfig"; path = "Target Support Files/Pods-PanyLoan/Pods-PanyLoan.release.xcconfig"; sourceTree = "<group>"; };
 		EE5373ACFC067C52A88967A0 /* libPods-PanyLoan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PanyLoan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +95,9 @@
 		07A86E04226DE033009620D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				07A86E11226DE922009620D5 /* Bill */,
+				07A86E10226DE900009620D5 /* Mine */,
+				07A86E0F226DE8E0009620D5 /* Home */,
 				07A86E05226DE047009620D5 /* common */,
 			);
 			path = Classes;
@@ -102,6 +114,33 @@
 				07A86E0D226DE11A009620D5 /* PLMacro.m */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		07A86E0F226DE8E0009620D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				07A86E18226DE990009620D5 /* PLHomeController.h */,
+				07A86E19226DE990009620D5 /* PLHomeController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		07A86E10226DE900009620D5 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				07A86E15226DE984009620D5 /* PLMineController.h */,
+				07A86E16226DE984009620D5 /* PLMineController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		07A86E11226DE922009620D5 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				07A86E12226DE965009620D5 /* PLBillController.h */,
+				07A86E13226DE965009620D5 /* PLBillController.m */,
+			);
+			path = Bill;
 			sourceTree = "<group>";
 		};
 		2BE6C6A51B717EC5A51878F5 /* Pods */ = {
@@ -219,9 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A86DFE226DDDCB009620D5 /* main.m in Sources */,
+				07A86E17226DE984009620D5 /* PLMineController.m in Sources */,
 				07A86E0B226DE096009620D5 /* PLNavgationController.m in Sources */,
 				07A86E08226DE079009620D5 /* PLTabBarController.m in Sources */,
 				07A86E0E226DE11A009620D5 /* PLMacro.m in Sources */,
+				07A86E14226DE965009620D5 /* PLBillController.m in Sources */,
+				07A86E1A226DE990009620D5 /* PLHomeController.m in Sources */,
 				07A86DF0226DDDCB009620D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

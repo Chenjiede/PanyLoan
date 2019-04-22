@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 #import "PLTabBarController.h"
-#import "PLNavgationController.h"
 
 @interface AppDelegate ()
 
@@ -24,25 +23,9 @@
     
     PLTabBarController *barVC = [[PLTabBarController alloc] init];
     
-    UIViewController *one = [[UIViewController alloc] init];
-    one.view.backgroundColor = [UIColor redColor];
-    PLNavgationController *oneNav = [[PLNavgationController alloc] initWithRootViewController:one];
-    
-    UIViewController *two = [[UIViewController alloc] init];
-    one.view.backgroundColor = [UIColor blueColor];
-    PLNavgationController *twoNav = [[PLNavgationController alloc] initWithRootViewController:two];
-    
-    UIViewController *three = [[UIViewController alloc] init];
-    one.view.backgroundColor = [UIColor purpleColor];
-    PLNavgationController *threeNav = [[PLNavgationController alloc] initWithRootViewController:three];
-    
-    [barVC addChildViewController:oneNav];
-    [barVC addChildViewController:twoNav];
-    [barVC addChildViewController:threeNav];
-    
     window.rootViewController = barVC;
     
-    [window makeKeyWindow];
+    [window makeKeyAndVisible];
     self.window = window;
     
     return YES;

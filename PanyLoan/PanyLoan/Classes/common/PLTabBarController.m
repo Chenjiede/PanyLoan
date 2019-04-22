@@ -8,6 +8,11 @@
 
 #import "PLTabBarController.h"
 
+#import "PLNavgationController.h"
+#import "PLHomeController.h"
+#import "PLBillController.h"
+#import "PLMineController.h"
+
 @interface PLTabBarController ()
 
 @end
@@ -16,17 +21,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    UIViewController *one = [[UIViewController alloc] init];
+//    one.view.backgroundColor = [UIColor redColor];
+//    PLNavgationController *oneNav = [[PLNavgationController alloc] initWithRootViewController:one];
+//
+//    UIViewController *two = [[UIViewController alloc] init];
+//    one.view.backgroundColor = [UIColor blueColor];
+//    PLNavgationController *twoNav = [[PLNavgationController alloc] initWithRootViewController:two];
+//
+//    UIViewController *three = [[UIViewController alloc] init];
+//    one.view.backgroundColor = [UIColor purpleColor];
+//    PLNavgationController *threeNav = [[PLNavgationController alloc] initWithRootViewController:three];
+    
+//    [barVC addChildViewController:oneNav];
+//    [barVC addChildViewController:twoNav];
+//    [barVC addChildViewController:threeNav];
+    
+    // 添加子控制器
+    [self setupChildVc:[[PLBillController alloc] init] title:@"账单" image:@"bill" selectedImage:@"main"];
+    
+    [self setupChildVc:[[PLHomeController alloc] init] title:@"首页" image:@"bill" selectedImage:@"main"];
+    
+    [self setupChildVc:[[PLMineController alloc] init] title:@"我的" image:@"bill" selectedImage:@"main"];
+    
+    self.selectedIndex = 1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
+{
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    PLNavgationController *nav = [[PLNavgationController alloc] initWithRootViewController:vc];
+    
+    [self addChildViewController:nav];
 }
-*/
+
 
 @end
