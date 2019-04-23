@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078F5602226F3C1800A18037 /* PLHomeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F5601226F3C1800A18037 /* PLHomeContentView.m */; };
+		078F5604226F3C2F00A18037 /* PLHomeContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078F5603226F3C2F00A18037 /* PLHomeContentView.xib */; };
+		078F5607226F460F00A18037 /* PLMineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F5606226F460F00A18037 /* PLMineTopView.m */; };
+		078F5609226F461C00A18037 /* PLMineTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078F5608226F461C00A18037 /* PLMineTopView.xib */; };
 		07A86DF0226DDDCB009620D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A86DEF226DDDCB009620D5 /* AppDelegate.m */; };
 		07A86DF6226DDDCB009620D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A86DF4226DDDCB009620D5 /* Main.storyboard */; };
 		07A86DF8226DDDCB009620D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A86DF7226DDDCB009620D5 /* Assets.xcassets */; };
@@ -22,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		078F5600226F3C1800A18037 /* PLHomeContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLHomeContentView.h; sourceTree = "<group>"; };
+		078F5601226F3C1800A18037 /* PLHomeContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLHomeContentView.m; sourceTree = "<group>"; };
+		078F5603226F3C2F00A18037 /* PLHomeContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLHomeContentView.xib; sourceTree = "<group>"; };
+		078F5605226F460F00A18037 /* PLMineTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMineTopView.h; sourceTree = "<group>"; };
+		078F5606226F460F00A18037 /* PLMineTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMineTopView.m; sourceTree = "<group>"; };
+		078F5608226F461C00A18037 /* PLMineTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLMineTopView.xib; sourceTree = "<group>"; };
 		07A86DEB226DDDCB009620D5 /* PanyLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanyLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A86DEE226DDDCB009620D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07A86DEF226DDDCB009620D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +131,9 @@
 			children = (
 				07A86E18226DE990009620D5 /* PLHomeController.h */,
 				07A86E19226DE990009620D5 /* PLHomeController.m */,
+				078F5600226F3C1800A18037 /* PLHomeContentView.h */,
+				078F5601226F3C1800A18037 /* PLHomeContentView.m */,
+				078F5603226F3C2F00A18037 /* PLHomeContentView.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -130,6 +143,9 @@
 			children = (
 				07A86E15226DE984009620D5 /* PLMineController.h */,
 				07A86E16226DE984009620D5 /* PLMineController.m */,
+				078F5605226F460F00A18037 /* PLMineTopView.h */,
+				078F5606226F460F00A18037 /* PLMineTopView.m */,
+				078F5608226F461C00A18037 /* PLMineTopView.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -219,7 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078F5609226F461C00A18037 /* PLMineTopView.xib in Resources */,
 				07A86DFB226DDDCB009620D5 /* LaunchScreen.storyboard in Resources */,
+				078F5604226F3C2F00A18037 /* PLHomeContentView.xib in Resources */,
 				07A86DF8226DDDCB009620D5 /* Assets.xcassets in Resources */,
 				07A86DF6226DDDCB009620D5 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078F5602226F3C1800A18037 /* PLHomeContentView.m in Sources */,
+				078F5607226F460F00A18037 /* PLMineTopView.m in Sources */,
 				07A86DFE226DDDCB009620D5 /* main.m in Sources */,
 				07A86E17226DE984009620D5 /* PLMineController.m in Sources */,
 				07A86E0B226DE096009620D5 /* PLNavgationController.m in Sources */,

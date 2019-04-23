@@ -8,6 +8,9 @@
 
 #import "PLHomeController.h"
 
+#import <Masonry.h>
+#import "PLHomeContentView.h"
+
 @interface PLHomeController ()
 
 @end
@@ -18,16 +21,46 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    [self initUI];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initUI {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    UIImageView *backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WechatIMG53"]];
+    
+    [self.view addSubview:backImageView];
+    [backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(width, width / 1.3));
+        make.top.mas_equalTo(0);
+        make.left.mas_equalTo(0);
+    }];
+    
+    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(width - 48, 40, 24, 33.5)];
+    [shareButton setImage:[UIImage imageNamed:@"1画板 18jpg"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(onKefu) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:shareButton];
+    
+    PLHomeContentView *contentView = [[UINib nibWithNibName:@"PLHomeContentView" bundle:nil] instantiateWithOwner:nil  options:nil].firstObject;
+    [self.view addSubview:contentView];
+    
+    contentView.layer.borderWidth = 0.5;
+    contentView.layer.borderColor = [UIColor grayColor].CGColor;
+//    contentView.backgroundColor = [UIColor redColor];
+    
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(backImageView.mas_bottom).offset(-120);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+        make.bottom.mas_equalTo(0);
+    }];
 }
-*/
 
+- (void)onKefu {
+    
+}
 @end
